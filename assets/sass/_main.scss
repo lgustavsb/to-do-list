@@ -1,0 +1,189 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 110rem;
+  height: 100vh;
+  margin: 0 auto;
+  transition: all 0.3s;
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .btn-add-painel-tarefas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #2644ed;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.4rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+    i {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-right: 0.5rem;
+    }
+    span {
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+    &:hover,
+    :focus,
+    :active {
+      box-shadow: 0 0 0 0.25rem rgba(38, 68, 237, 0.5);
+    }
+  }
+  .painel-add-tarefas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2rem;
+    .lista-tarefa {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      box-shadow: 0px 0px 6px 2px #efefef;
+      width: 30rem;
+      border-radius: 0.4rem;
+      margin: 0 1.5rem 3rem 1.5rem;
+      .box-lista {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        button {
+          background-color: transparent;
+          i {
+            font-size: 1.4rem;
+            color: #2644ed;
+            margin-right: 0.8rem;
+          }
+        }
+        input {
+          font-weight: 600;
+          font-size: 1.6rem;
+        }
+      }
+      .title-lista {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        h4 {
+          font-size: 1.8rem;
+        }
+        input {
+          color: #444;
+        }
+        button {
+          background-color: transparent;
+          i {
+            color: #afacac;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            pointer-events: none;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+      .tarefas-fixadas {
+        width: 100%;
+        .item-tarefa {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          position: relative;
+          margin-bottom: 1rem;
+          input[type="checkbox"] {
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            -webkit-print-color-adjust: exact;
+            cursor: pointer;
+            &:checked + label {
+              color: #afacac;
+              text-decoration: line-through;
+            }
+            margin-right: 0.8rem;
+            &:focus {
+              border-color: #86b7fe;
+              outline: 0;
+              box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            }
+            &:active {
+              filter: brightness(90%);
+            }
+            &:checked {
+              background-color: #0d6efd;
+              border-color: #0d6efd;
+              background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+            }
+          }
+          label {
+            font-size: 1.6rem;
+            color: #333;
+            font-weight: 500;
+          }
+          button {
+            position: absolute;
+            right: 0;
+            background-color: transparent;
+            i {
+              color: #afacac;
+              font-size: 1.4rem;
+              transition: all 0.3s;
+              pointer-events: none;
+              &:hover {
+                color: red;
+              }
+            }
+          }
+        }
+      }
+      .item-add-tarefa {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        button {
+          background-color: transparent;
+          margin-right: 1rem;
+          margin-left: 0.2rem;
+          i {
+            font-size: 1.4rem;
+            color: #0d6efd;
+          }
+        }
+        input {
+          font-weight: 600;
+          font-size: 1.6rem;
+        }
+      }
+
+    }
+  }
+}
